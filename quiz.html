@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OpenPages </title>
+		<link rel="stylesheet" href="homepage.css">
+		<link rel="icon" href="logo.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="Madhushree Rasal">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<nav class="nav">
+			<h1>OpenPages - A Digital Library<h1>
+		</nav>
+		<main class="personalization">
+			<section class="preferences">
+			  <h2 class="heading">Help Us Know You Better</h2>
+			  <p>
+				To recommend books that match your interests, we’d love to learn a little 
+				about your reading habits. This step is completely optional — you can skip 
+				it and explore general recommendations instead.
+			  </p>
+
+			  <form action="books.html" method="get">
+
+				<!-- 1. Favorite Genre -->
+				<fieldset>
+				  <legend>1. Favorite Genre</legend>
+
+				  <p>What genre do you enjoy the most?</p>
+
+				  <input type="radio" id="fantasy" name="genre" value="Fantasy">
+				  <label for="fantasy">Fantasy</label><br>
+
+				  <input type="radio" id="scifi" name="genre" value="Science Fiction">
+				  <label for="scifi">Science Fiction</label><br>
+
+				  <input type="radio" id="selfhelp" name="genre" value="Self-Help">
+				  <label for="selfhelp">Self-Help</label><br>
+
+				  <input type="radio" id="mystery" name="genre" value="Mystery">
+				  <label for="mystery">Mystery / Thriller</label><br>
+
+				  <input type="radio" id="educational" name="genre" value="Educational">
+				  <label for="educational">Educational / Academic</label>
+				</fieldset>
+
+				<br>
+
+				<!-- 2. Why Do You Read -->
+				<fieldset>
+				  <legend>2. Why Do You Read?</legend>
+
+				  <p>Select all that apply:</p>
+
+				  <input type="checkbox" id="entertainment" name="purpose" value="Entertainment">
+				  <label for="entertainment">Entertainment</label><br>
+
+				  <input type="checkbox" id="study" name="purpose" value="Study">
+				  <label for="study">Academic Study</label><br>
+
+				  <input type="checkbox" id="growth" name="purpose" value="Growth">
+				  <label for="growth">Personal Growth</label><br>
+
+				  <input type="checkbox" id="skills" name="purpose" value="Skills">
+				  <label for="skills">Skill Development</label><br>
+
+				  <input type="checkbox" id="relax" name="purpose" value="Relaxation">
+				  <label for="relax">Relaxation</label>
+				</fieldset>
+
+				<br>
+
+				<!-- 3. Reading Intensity (Range) -->
+				<fieldset>
+				  <legend>3. Reading Intensity</legend>
+
+				  <label for="intensity">
+					How serious are you about reading?
+				  </label><br>
+
+				  <span>1 (Casual)</span>
+				  <input type="range" id="intensity" name="intensity"
+						 min="1" max="5" step="1"
+						 oninput="level.value = intensity.value">
+				  <span>5 (Obsessed Bookworm)</span>
+
+				  <br><br>
+				  Selected Level: <output name="level">3</output>
+				</fieldset>
+
+				<br>
+
+				<!-- 4. Preferred Reading Time -->
+				<fieldset>
+				  <legend>4. Preferred Reading Time</legend>
+
+				  <label for="readingtime">
+					What time of the day do you usually read?
+				  </label><br>
+				  <input type="time" id="readingtime" name="reading_time">
+				</fieldset>
+
+				<br>
+
+				<!-- 5. Start Recommendations -->
+				<fieldset>
+				  <legend>5. Start Date for Recommendations</legend>
+
+				  <label for="start">
+					When would you like to start receiving recommendations?
+				  </label><br>
+				  <input type="datetime-local" id="start" name="start_date">
+				</fieldset>
+
+				<br>
+
+				<!-- 6. Favorite Author (Datalist) -->
+				<fieldset>
+				  <legend>6. Favorite Author</legend>
+
+				  <label for="author">Enter your favorite author:</label><br>
+				  <input list="authors" id="author" name="author">
+
+				  <datalist id="authors">
+					<option value="J.K. Rowling">
+					<option value="George Orwell">
+					<option value="Agatha Christie">
+					<option value="Stephen King">
+					<option value="Jane Austen">
+					<option value="R.K. Narayan">
+				  </datalist>
+				</fieldset>
+
+				<br>
+
+				<!-- 7. Reading Pace -->
+				<fieldset>
+				  <legend>7. Reading Pace</legend>
+
+				  <label for="pace">How would you describe your reading pace?</label><br>
+				  <select id="pace" name="pace">
+					<option value="">--Select--</option>
+					<option value="slow">Slow & Thoughtful</option>
+					<option value="moderate">Moderate</option>
+					<option value="fast">Fast Reader</option>
+					<option value="depends">Depends on the Book</option>
+				  </select>
+				</fieldset>
+
+				<br>
+
+				<!-- 8. Ideal Book Description -->
+				<fieldset>
+				  <legend>8. Your Ideal Book</legend>
+
+				  <label for="ideal">
+					What kind of story or content are you looking for right now?
+				  </label><br>
+				  <textarea id="ideal" name="ideal_book" rows="4" cols="40"
+					placeholder="Describe your ideal book..."></textarea>
+				</fieldset>
+
+				<br>
+
+				<!-- 9. Search Topic -->
+				<fieldset>
+				  <legend>9. Topic Search</legend>
+
+				  <label for="topic">
+					Search for a topic you are currently interested in:
+				  </label><br>
+				  <input type="search" id="topic" name="topic"
+					placeholder="e.g., space exploration, productivity, mythology">
+				</fieldset>
+
+				<br><br>
+
+				<!-- Buttons -->
+				<input class="button" type="submit" value="Get My Recommendations">
+				<input class="button" type="reset" value="Clear">
+
+			  </form>
+
+			  <br>
+
+			  <!-- Skip Option -->
+			  <a href="books.html">
+				<button class="skip" type="button">Skip for Now</button>
+			  </a>
+
+			</section>
+		</main>
+		<footer>
+			<p class="">Connect with us through: </p>
+			<div class="flex">
+				<a href=""><div class="icon"><i class="ri-instagram-fill"></i></div></a>
+				<a href=""><div class="icon"><i class="ri-youtube-fill"></i></div></a>
+				<a href=""><div class="icon"><i class="ri-twitter-x-line"></i></div></a>
+			</div>
+			<p class="">Email : <i>openpages22@gmail.com</i></p>
+			<p class="p">&copy All Rights reserved Copyright 2026</p>
+		</footer>
+	</body>
+</html>

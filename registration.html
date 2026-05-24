@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OpenPages </title>
+		<link rel="stylesheet" href="homepage.css">
+		<link rel="icon" href="logo.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="Madhushree Rasal">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<nav>
+			<h1>OpenPages - A Digital Library<h1>
+		</nav>
+		<main class="registration">
+			<section id="register">
+			  <h2 class="h2">Create Your Member Account</h2>
+			  <p>Please fill in the details below to join our digital reading community.</p>
+
+			  <form action="quiz.html" method="post">
+
+				<!-- Personal Information -->
+				<fieldset>
+				  <legend>Personal Information</legend>
+
+				  <label for="fullname">Full Name:</label><br>
+				  <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+				  <label for="username">Username:</label><br>
+				  <input type="text" id="username" name="username" placeholder="Choose a username" required><br><br>
+
+				  <label for="email">Email Address:</label><br>
+				  <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+				  <label for="phone">Phone Number:</label><br>
+				  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+
+				  <label for="dob">Date of Birth:</label><br>
+				  <input type="date" id="dob" name="dob" required><br><br>
+				</fieldset>
+
+				<br>
+
+				<!-- Account Setup -->
+				<fieldset>
+				  <legend>Account Setup</legend>
+
+				  <label for="password">Create Password:</label><br>
+				  <input type="password" id="password" name="password" placeholder="(6 characters at least)" minlength="6" required><br><br>
+
+				  <label for="confirm">Confirm Password:</label><br>
+				  <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required><br><br>
+
+				  <input type="hidden" name="membership_id" value="OP12345">
+				  <p>How do you want your account?</p>
+					<input type="radio" name="account" id="praccount" value="Private_account" required>
+					<label for="praccount">Private Account</label>
+					<br>
+					<input type="radio" name="account" id="account" value="public_account" required>
+					<label for="account">Public Account</label>
+				</fieldset>
+
+				<br>
+
+				<!-- Reader Profile -->
+				<fieldset>
+				  <legend>Reader Profile</legend>
+
+				  <p>Age Group:</p>
+				  <input type="radio" id="under13" name="age_group" value="Under 13">
+				  <label for="under13">Under 13</label><br>
+
+				  <input type="radio" id="teen" name="age_group" value="13-18">
+				  <label for="teen">13–18</label><br>
+
+				  <input type="radio" id="adult" name="age_group" value="18-25">
+				  <label for="adult">18–25</label><br>
+
+				  <input type="radio" id="above25" name="age_group" value="25+">
+				  <label for="above25">25+</label><br><br>
+
+				  <label for="education">Education Level:</label><br>
+				  <select id="education" name="education">
+					<option value="">--Select--</option>
+					<option value="school">School</option>
+					<option value="undergraduate">Undergraduate</option>
+					<option value="postgraduate">Postgraduate</option>
+					<option value="professional">Professional</option>
+					<option value="other">Other</option>
+				  </select><br><br>
+
+				  <p>Preferred Reading Format:</p>
+				  <input type="checkbox" id="ebook" name="format" value="eBook">
+				  <label for="ebook">eBooks</label><br>
+
+				  <input type="checkbox" id="audiobook" name="format" value="Audiobook">
+				  <label for="audiobook">Audiobooks</label><br>
+
+				  <input type="checkbox" id="pdf" name="format" value="PDF">
+				  <label for="pdf">PDFs</label><br><br>
+
+				  <label for="bio">Short Bio (optional):</label><br>
+				  <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us a little about yourself..."></textarea><br><br>
+
+				  <label for="profilepic">Upload Profile Picture:</label><br>
+				  <input type="file" id="profilepic" name="profilepic" accept="image/*"><br><br>
+
+				  <label for="theme">Choose Profile Theme Color:</label>
+				  <input type="color" id="theme" name="theme"><br><br>
+				</fieldset>
+
+				<br>
+
+				<!-- Agreement -->
+				<fieldset>
+				  <legend>Community Agreement</legend>
+
+				  <input type="checkbox" id="terms" name="terms" required>
+				  <label for="terms">I agree to the community guidelines (required)</label><br><br>
+
+				  <input type="checkbox" id="updates" name="updates">
+				  <label for="updates">Subscribe to email updates</label><br><br>
+				</fieldset>
+
+				<br>
+
+				<input class="button" type="submit" value="Register">
+				<input class="button" type="reset" value="Clear Form">
+
+			  </form>
+			</section>
+		</main>
+		<footer>
+			<p class="">Connect with us through: </p>
+			<div class="flex">
+				<a href=""><div class="icon"><i class="ri-instagram-fill"></i></div></a>
+				<a href=""><div class="icon"><i class="ri-youtube-fill"></i></div></a>
+				<a href=""><div class="icon"><i class="ri-twitter-x-line"></i></div></a>
+			</div>
+			<p class="">Email : <i>openpages22@gmail.com</i></p>
+			<p class="p">&copy All Rights reserved Copyright 2026</p>
+		</footer>
+	</body>
+</html>
